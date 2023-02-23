@@ -1,0 +1,26 @@
+<html><head><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    
+    function drawChart() {
+    
+      var data = google.visualization.arrayToDataTable([
+        ['descripcion', 'nombre de facturas'],
+        ['facturas revisadas',     1809],
+        ['facturas en mal estado',      49],
+        ['facturas a revisar',  1214]
+      ]);
+    
+      var options = {
+        title: 'informe facturas'
+      };
+    
+      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    
+      chart.draw(data, options);
+    }</script></head>
+    <body>
+      <a href="piechart_proveedores.html"><button type="button" class="btn btn-primary" >informe proveedors</button></a>
+     <center> <div id="piechart" style="width: 1024px; height: 768px;"></div></center> </body>
+     </html>
