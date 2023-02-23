@@ -1,0 +1,21 @@
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    
+    function drawChart() {
+    
+      var data = google.visualization.arrayToDataTable([
+        ['descripcion', 'nombre de provzeedores'],
+        ['proveedors a revisar',     171],
+          ['proveedors revisados',     38],
+      ]);
+    
+      var options = {
+        title: 'informe facturas'
+      };
+    
+      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    
+      chart.draw(data, options);
+    }</script>
+     <center> <div id="piechart" style="width: 1024px; height: 768px;"></div></center> 
